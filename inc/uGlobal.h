@@ -2,7 +2,6 @@
 Autor:			Pavel
 Date Of Update: 05.08.2020
 File:			uGlobal.h
-Description:	Logica contains various of logical functions and techniques to simplify some decisions in the field of automation and decision selection systems
 */
 
 #ifndef UGLOBAL_H
@@ -34,17 +33,5 @@ typedef uint8_t		uEvent;
 typedef uint8_t		uBit;
 typedef void		uFunction;
 typedef int			uInteger;
-
-typedef struct __attribute__ ((packed)) {
-	uInteger	firstTime;
-	uInteger	requestMaxTime;
-	uInteger	resetTime;
-	uInteger	_lastTimeForReset;
-	uInteger	_lastResetTime;
-	uInteger	_lastWorkTime;
-	uState		wasActivated;
-	uState		state;
-	uState		pauseState;
-} uProtectorTimer;
 
 #endif /* UGLOBAL_H */

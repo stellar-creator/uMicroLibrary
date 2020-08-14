@@ -2,7 +2,6 @@
 Autor:			Pavel
 Date Of Update: 05.08.2020
 File:			uLogica.h
-Description:	Logica contains various of logical functions and techniques to simplify some decisions in the field of automation and decision selection systems
 */
 
 #ifndef ULOGICA_H
@@ -40,11 +39,5 @@ uState		uLogica_RangeComparatorCompare(uRangeComparator *data, uInteger value);
 
 uState 		uLogica_RangeHysteresisInit(uRangeHysteresis *data, uInteger min, uInteger max);
 uState 		uLogica_RangeHysteresisCompare(uRangeHysteresis *data, uInteger value);
-
-uState 		uLogica_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime, uInteger resetTime);
-uState 		uLogica_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState enabled);
-uState 		uLogica_TimeProtectorSet(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime);
-uFunction	uLogica_TimeProtectorSetStage(uProtectorTimer *data, uState state, uInteger time);
-uFunction	uLogica_TimeProtectorPause(uProtectorTimer *data, uState outputState);
 
 #endif /* ULOGICA_H */
