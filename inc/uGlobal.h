@@ -19,9 +19,8 @@ File:			uGlobal.h
 #define uDisabled				(uint8_t) 0x00
 #define uEnabled				(uint8_t) 0x01
 
-
-#define uState_Ready			(uint8_t) 0x00
-#define uState_Done				(uint8_t) 0x01
+#define uState_Done				(uint8_t) 0x00
+#define uState_Ready			(uint8_t) 0x01
 #define uState_InProcess		(uint8_t) 0x02
 #define uState_Unknown			(uint8_t) 0x03
 #define uState_Error			(uint8_t) 0x04
