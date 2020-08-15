@@ -1,8 +1,7 @@
 /*
-Autor:			Pavel
+Autor:			Stellar Creator
 Date Of Update: 05.08.2020
 File:			uLogica.c
-Description:	Logica contains various of logical functions and techniques to simplify some decisions in the field of automation and decision selection systems
 */
 
 #include "uGlobal.h"

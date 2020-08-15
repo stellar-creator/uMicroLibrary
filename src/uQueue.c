@@ -1,5 +1,5 @@
 /*
-Autor:          Pavel
+Autor:          Stellar Creator
 Date Of Update: 14.08.2020
 File:           uQueue.c
 */

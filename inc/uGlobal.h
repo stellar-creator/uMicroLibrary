@@ -1,5 +1,5 @@
 /*
-Autor:			Pavel
+Autor:			Stellar Creator
 Date Of Update: 05.08.2020
 File:			uGlobal.h
 */
