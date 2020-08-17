@@ -37,6 +37,7 @@ File:			uGlobal.h
 typedef uint8_t		uState;
 typedef uint8_t		uEvent;
 typedef uint8_t		uBit;
+typedef uint8_t		uData;
 typedef void		uFunction;
 typedef int			uInteger;
 
