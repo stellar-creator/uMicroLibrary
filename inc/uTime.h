@@ -17,6 +17,7 @@ typedef struct __attribute__ ((packed)) {
 	uInteger	_lastTimeForReset;
 	uInteger	_lastResetTime;
 	uInteger	_lastWorkTime;
+	uInteger	_firstTime;
 	uState		wasActivated;
 	uState		state;
 	uState		pauseState;

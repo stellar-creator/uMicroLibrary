@@ -9,6 +9,7 @@ File:			uTime.c
 
 uState uLogica_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime, uInteger resetTime){
 	data->firstTime = firstTime;
+	data->_firstTime = firstTime;
 	data->requestMaxTime = requestMaxTime;
 	data->resetTime = resetTime;
 	data->_lastTimeForReset = 0;
@@ -25,6 +26,16 @@ uState uLogica_TimeProtectorSet(uProtectorTimer *data, uInteger firstTime, uInte
 }
 
 uState uLogica_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState status){
+	
+	if (data->_lastTimeForReset > time){
+		data->wasActivated = uProtector_FirtsStart;
+		data->firstTime = data->_firstTime;
+		data->_lastTimeForReset = 0;
+		data->_lastWorkTime = 0;
+		data->_lastResetTime = 0;
+		data->pauseState = uDisabled;
+	}
+
 	switch(data->wasActivated){
 		case uProtector_FirtsStart:
 			if(status == uDisabled){
