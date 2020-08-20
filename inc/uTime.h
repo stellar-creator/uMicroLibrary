@@ -23,10 +23,10 @@ typedef struct __attribute__ ((packed)) {
 	uState		pauseState;
 } uProtectorTimer;
 
-uState 		uLogica_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime, uInteger resetTime);
-uState 		uLogica_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState enabled);
-uState 		uLogica_TimeProtectorSet(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime);
-uFunction	uLogica_TimeProtectorSetStage(uProtectorTimer *data, uState state, uInteger time);
-uFunction	uLogica_TimeProtectorPause(uProtectorTimer *data, uState outputState);
+uState 		uTime_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime, uInteger resetTime);
+uState 		uTime_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState enabled);
+uState 		uTime_TimeProtectorSet(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime);
+uFunction	uTime_TimeProtectorSetStage(uProtectorTimer *data, uState state, uInteger time);
+uFunction	uTime_TimeProtectorPause(uProtectorTimer *data, uState outputState);
 
 #endif /* UTIME_H */

@@ -7,7 +7,7 @@ File:			uTime.c
 #include "uGlobal.h"
 #include "uTime.h"
 
-uState uLogica_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime, uInteger resetTime){
+uState uTime_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime, uInteger resetTime){
 	data->firstTime = firstTime;
 	data->_firstTime = firstTime;
 	data->requestMaxTime = requestMaxTime;
@@ -20,12 +20,12 @@ uState uLogica_TimeProtectorInit(uProtectorTimer *data, uInteger firstTime, uInt
 	data->pauseState = uDisabled;
 }
 
-uState uLogica_TimeProtectorSet(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime){
+uState uTime_TimeProtectorSet(uProtectorTimer *data, uInteger firstTime, uInteger requestMaxTime){
 	data->firstTime = firstTime;
 	data->requestMaxTime = requestMaxTime;
 }
 
-uState uLogica_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState status){
+uState uTime_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState status){
 	
 	if (data->_lastTimeForReset > time){
 		data->wasActivated = uProtector_FirtsStart;
@@ -80,7 +80,7 @@ uState uLogica_TimeProtectorCompare(uProtectorTimer *data, uInteger time, uState
 	return data->state;
 }
 
-uFunction uLogica_TimeProtectorSetStage(uProtectorTimer *data, uState state, uInteger time){
+uFunction uTime_TimeProtectorSetStage(uProtectorTimer *data, uState state, uInteger time){
 	if(state == uProtector_Reset){
 			data->state = uDisabled;
 			data->_lastTimeForReset = time;
@@ -88,7 +88,7 @@ uFunction uLogica_TimeProtectorSetStage(uProtectorTimer *data, uState state, uIn
 	}
 }
 
-uFunction uLogica_TimeProtectorPause(uProtectorTimer *data, uState outputState){
+uFunction uTime_TimeProtectorPause(uProtectorTimer *data, uState outputState){
 	data->wasActivated = uProtector_Pause; 
 	data->pauseState = outputState; 
 }
