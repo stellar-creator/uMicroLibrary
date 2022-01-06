@@ -1,4 +1,4 @@
-**MicroLibrary** - contains various of logical functions and techniques to simplify some decisions in the field of automation and decision in selection systems.
+**uMicroLibrary** - contains various of logical functions and techniques to simplify some decisions in the field of automation and decision in selection systems.
 
 In most cases, developers will need this library for platforms on microcontrollers and for embedded systems.
 
