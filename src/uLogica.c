@@ -47,6 +47,7 @@ uState uLogica_RangeHysteresisInit(uRangeHysteresis *data, uInteger min, uIntege
 	data->hysteresisMinValue = min;
 	data->hysteresisMaxValue = max;
 	data->hysteresisState = uDisabled;	
+	return data->hysteresisState;
 }
 
 uState uLogica_RangeHysteresisCompare(uRangeHysteresis *data, uInteger value){

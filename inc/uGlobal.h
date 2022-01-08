@@ -24,6 +24,8 @@ File:			uGlobal.h
 #define uState_InProcess		(uint8_t) 0x02
 #define uState_Unknown			(uint8_t) 0x03
 #define uState_Error			(uint8_t) 0x04
+#define uState_Init				(uint8_t) 0x05
+#define uState_Prepare			(uint8_t) 0x06
 
 #define uProtector_FirtsStart	(uint8_t) 0x00
 #define uProtector_Reset		(uint8_t) 0x01
@@ -37,8 +39,14 @@ File:			uGlobal.h
 typedef uint8_t		uState;
 typedef uint8_t		uEvent;
 typedef uint8_t		uBit;
-typedef uint8_t		uData;
+typedef uint8_t		uData;;
+typedef uint8_t		uRegister;
 typedef void		uFunction;
 typedef int			uInteger;
+typedef int16_t		uInteger16;
+typedef int32_t		uInteger32;
+typedef int32_t		uSize;
+typedef uint8_t		uAddress;
+typedef float		uFloat;
 
 #endif /* UGLOBAL_H */

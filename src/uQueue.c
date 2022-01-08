@@ -7,11 +7,13 @@ File:           uQueue.c
 #include "uGlobal.h"
 #include "uQueue.h"
 
+#define uMaxQueueSize 128
+
 #ifndef uMaxQueueSize
-#error Please set macros 'uMaxQueueSize', now macros isn't set. This value is maximum size of queue.
+#error 'Please set macros \'uMaxQueueSize\', now macros isn\'t set. This value is maximum size of queue.'
 #endif
 
-uFunction uQueueAdd(Queue *q, uInteger data){
+uFunction uQueueAdd(uQueue *q, uInteger data){
     if(q->index > uMaxQueueSize){
     	q->index = 0;
     }
@@ -19,7 +21,7 @@ uFunction uQueueAdd(Queue *q, uInteger data){
     q->index++;
 }
 
-uInteger uQueueGet(Queue *q){
+uInteger uQueueGet(uQueue *q){
     uInteger backfeed = 0;
     if(q->index > 0){
         backfeed = q->data[q->index - 1];
@@ -31,7 +33,7 @@ uInteger uQueueGet(Queue *q){
     return backfeed;
 }
 
-uInteger uQueueIsReady(Queue *q){
+uInteger uQueueIsReady(uQueue *q){
     if(q->index > 0){
     	return uState_Ready;
     }else{
